@@ -10,6 +10,7 @@ import {
   space,
 } from '@ticketswap/solar'
 import styled from '@emotion/styled'
+import PopularEvents from '~/components/PopularEvents'
 
 const StyledCollapsible = styled(Collapsible)`
   color: ${color.space};
@@ -108,6 +109,9 @@ const Home = () => (
           </li>
         </List>
       </StyledCollapsible>
+
+      <SubTitle>Popular events</SubTitle>
+      <PopularEvents />
     </Container>
 
     <Footer />
