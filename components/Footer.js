@@ -1,0 +1,18 @@
+import React from 'react'
+import styled from '@emotion/styled'
+import { color, space } from '@ticketswap/solar'
+import { TicketSwap } from '@ticketswap/comets'
+
+const Wrapper = styled.footer`
+  padding: ${space[32]} 0;
+  margin-top: ${space[32]};
+  text-align: center;
+`
+
+const Footer = () => (
+  <Wrapper>
+    <TicketSwap /> TicketSwap
+  </Wrapper>
+)
+
+export default Footer
