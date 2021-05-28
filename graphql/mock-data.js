@@ -1,4 +1,4 @@
-module.exports = [
+export const events = [
   {
     id: 1,
     name: 'Lowlands Festival',

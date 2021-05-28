@@ -1,6 +1,6 @@
-const { gql } = require('apollo-server-express')
+import { gql } from '@apollo/client'
 
-module.exports = gql`
+export const typeDefs = gql`
   type Event {
     id: Int!
     name: String!
