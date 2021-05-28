@@ -7,6 +7,7 @@ const event = gql`
     date
     location
     imageUrl
+    description
   }
 `
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { color, space } from '@ticketswap/solar'
+import { space } from '@ticketswap/solar'
 import { TicketSwap } from '@ticketswap/comets'
 
 const Wrapper = styled.footer`

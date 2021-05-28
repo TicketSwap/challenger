@@ -3,7 +3,7 @@ Thank you for doing our challenger. The goal would be to finish the todo-list st
 
 ## Setup
 First of all, you need to setup your local environment.
-If you don't have [node/npm](https://nodejs.org/en/) installed yet be sure to do so.
+If you don't have [node/npm](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/getting-started/install) installed yet be sure to do so. 
 ```shell script
 > git clone git@github.com:TicketSwap/challenger.git
 > cd challenger

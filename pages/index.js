@@ -2,13 +2,7 @@ import React from 'react'
 import Container from '~/components/Container'
 import Cover from '~/components/Cover'
 import Footer from '~/components/Footer'
-import {
-  Collapsible,
-  color,
-  fontSize,
-  fontWeight,
-  space,
-} from '@ticketswap/solar'
+import { Collapsible, color, fontSize, Text, space } from '@ticketswap/solar'
 import styled from '@emotion/styled'
 import PopularEvents from '~/components/PopularEvents'
 
@@ -25,10 +19,9 @@ const List = styled.ul`
   margin-left: ${space[16]};
 `
 
-const Description = styled.p`
+const Description = styled(Text)`
   font-size: ${fontSize[18]};
-  font-weight: ${fontWeight.semiBold};
-  margin-bottom: ${space[16]};
+  margin: ${space[32]} 0 ${space[16]};
 `
 
 const SubTitle = styled.h3`
@@ -36,49 +29,56 @@ const SubTitle = styled.h3`
   margin-bottom: ${space[16]};
 `
 
+const Emoji = styled.span`
+  font-family: initial;
+`
+
 const Home = () => (
   <>
     <Cover />
 
     <Container>
-      <Description>
-        Welcome to the TicketSwap challenger. The goal of this challenger is to
-        finish the todo list stated below ☑️
+      <Description as="p">
+        <strong>Welcome to the TicketSwap challenger.</strong> The goal of this
+        challenger is to finish the todo list stated below <Emoji>☑️</Emoji> Of
+        course if you see anything that can be improved apart from the todo
+        list, you're welcome to do so <Emoji>☺️</Emoji>
       </Description>
 
       <StyledCollapsible buttonLabel="Todo list">
         <List>
           <li>
-            Oh ohh, guess we didn't think about mobile styling 😳 Can you make
-            it pretty?
+            <strong>Improvement:</strong> The Challenger should be mobile
+            friendly
           </li>
           <li>
-            Ouch, it looks like we have some errors popping up in the console 😖
-            Could you solve them for us?
+            <strong>Bugfix:</strong> There are some browser console errors that
+            need to be addressed
           </li>
           <li>
-            You can see that there is a popular events widget on this page,
-            unfortunately we couldn't get server-side rendering to work 🤔 Can
-            you?
+            <strong>Feature:</strong> The event page should be completely
+            server-side rendered
           </li>
           <li>
-            As you can see there are also event pages. These pages are a bit
-            simple right now, could you add some more data to that page? Also
-            please make sure that server-side render works there.
+            <strong>Improvement:</strong> The event page need some nice styling
+            for a better overview of all the information
           </li>
           <li>
-            We couldn't find the time to make a search page anymore, but it
-            would definitely make the challenger better. We want to be able to
-            search all the events that are in the mocked data set trough a
-            graphql query. Design-wise it's up to you (hint: check our design
-            system).
-          </li>
-          <li>
-            At the moment the navigation is a nightmare, can you make sure that
-            everything connects to each other correctly?
+            <strong>Story:</strong> As a user I want to be able to navigate to a
+            search page and search all the events. I want to see the results and
+            be able to navigate to an event.
           </li>
         </List>
       </StyledCollapsible>
+
+      <Description as="p">
+        <strong>Tip:</strong> Below is a list of references you can use to get
+        started if you have little experience with the tech stack. Also below is
+        a reference to our component library, there are many components that you
+        can use in the Challenger (for example for the search page). If you have
+        any question you can always{' '}
+        <a href="mailto:rob@ticketswap.com">contact us</a> <Emoji>💪</Emoji>
+      </Description>
 
       <StyledCollapsible buttonLabel="References">
         <List>
@@ -87,6 +87,14 @@ const Home = () => (
             to check it out go to{' '}
             <a href="https://github.com/TicketSwap/solar">Github Solar</a> or{' '}
             <a href="https://ticketswap.github.io/solar">Storybook Solar</a>
+          </li>
+          <li>
+            We also have an icon library that you can use, if you want to check
+            it out go to{' '}
+            <a href="https://github.com/TicketSwap/comets">Github Comets</a> or{' '}
+            <a href="https://ticketswap.github.io/comets-playground/">
+              Playground Comets
+            </a>
           </li>
           <li>
             The React framework we use for this challenger is{' '}
@@ -105,7 +113,9 @@ const Home = () => (
             The local API server is also from Apollo, see the docs for the{' '}
             <a href="https://www.apollographql.com/docs/apollo-server/">
               server
-            </a>
+            </a>{' '}
+            and explore the local API in the{' '}
+            <a href="/api/graphql">playground</a>.
           </li>
         </List>
       </StyledCollapsible>
