@@ -1,5 +1,5 @@
 import React from 'react'
-import { TicketSwap } from '@ticketswap/comets'
+import { TicketSwap } from '@ticketswap/solar/icons'
 import styled from '@emotion/styled'
 import { space, color, H1, shadow } from '@ticketswap/solar'
 
@@ -7,13 +7,13 @@ const Wrapper = styled.div`
   text-align: center;
   padding: ${space[16]} 0;
   margin-bottom: ${space[32]};
-  color: ${color.nova};
-  background-color: ${color.earth};
+  color: ${color.lightForeground};
+  background-color: ${color.brand};
   box-shadow: ${shadow.strong};
 `
 
 const Title = styled(H1)`
-  color: ${color.nova};
+  color: ${color.lightForeground};
 `
 
 const Cover = () => (
