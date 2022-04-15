@@ -8,18 +8,19 @@
     "start": "next start"
   },
   "dependencies": {
-    "@apollo/client": "^3.3.19",
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "@ticketswap/comets": "^2.14.0",
-    "@ticketswap/solar": "^20.1.1",
-    "apollo-server-micro": "^2.25.0",
-    "graphql": "^15.5.0",
-    "next": "10.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@apollo/client": "^3.5.10",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@graphql-tools/schema": "^8.3.8",
+    "@ticketswap/solar": "^24.0.1",
+    "apollo-server-micro": "^3.6.7",
+    "graphql": "^16.3.0",
+    "micro": "^9.3.4",
+    "next": "^12.1.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "prettier": "^2.3.0"
+    "prettier": "^2.6.2"
   }
 }

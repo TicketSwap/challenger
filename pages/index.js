@@ -6,14 +6,6 @@ import { Collapsible, color, fontSize, Text, space } from '@ticketswap/solar'
 import styled from '@emotion/styled'
 import PopularEvents from '~/components/PopularEvents'
 
-const StyledCollapsible = styled(Collapsible)`
-  color: ${color.space};
-
-  & + & {
-    margin-top: ${space[8]};
-  }
-`
-
 const List = styled.ul`
   list-style: disc;
   margin-left: ${space[16]};
@@ -45,7 +37,7 @@ const Home = () => (
         list, you're welcome to do so <Emoji>☺️</Emoji>
       </Description>
 
-      <StyledCollapsible buttonLabel="Todo list">
+      <Collapsible buttonLabel="Todo list">
         <List>
           <li>
             <strong>Improvement:</strong> The Challenger should be mobile
@@ -69,7 +61,7 @@ const Home = () => (
             be able to navigate to an event.
           </li>
         </List>
-      </StyledCollapsible>
+      </Collapsible>
 
       <Description as="p">
         <strong>Tip:</strong> Below is a list of references you can use to get
@@ -80,21 +72,25 @@ const Home = () => (
         <a href="mailto:rob@ticketswap.com">contact us</a> <Emoji>💪</Emoji>
       </Description>
 
-      <StyledCollapsible buttonLabel="References">
+      <Collapsible buttonLabel="References">
         <List>
           <li>
             We are using our own component library in this project, if you want
-            to check it out go to{' '}
-            <a href="https://github.com/TicketSwap/solar">Github Solar</a> or{' '}
-            <a href="https://ticketswap.github.io/solar">Storybook Solar</a>
-          </li>
-          <li>
-            We also have an icon library that you can use, if you want to check
-            it out go to{' '}
-            <a href="https://github.com/TicketSwap/comets">Github Comets</a> or{' '}
-            <a href="https://ticketswap.github.io/comets-playground/">
-              Playground Comets
-            </a>
+            to check it out go to. Within this project you'll find our icons as
+            well.
+            <ul>
+              <li>
+                <a href="https://github.com/TicketSwap/solar">Github Solar</a>
+              </li>
+              <li>
+                <a href="https://ticketswap.github.io/solar">Storybook Solar</a>
+              </li>
+              <li>
+                <a href="https://ticketswap.github.io/comets-playground/">
+                  Playground Comets
+                </a>
+              </li>
+            </ul>
           </li>
           <li>
             The React framework we use for this challenger is{' '}
@@ -118,7 +114,7 @@ const Home = () => (
             <a href="/api/graphql">playground</a>.
           </li>
         </List>
-      </StyledCollapsible>
+      </Collapsible>
 
       <SubTitle>Popular events</SubTitle>
       <PopularEvents />
