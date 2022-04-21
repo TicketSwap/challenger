@@ -24,7 +24,7 @@ The server will start at [localhost:3000](http://localhost:3000), where you can 
 
 ## Handing in the assessment
 
-When you're finished you can send it to us in reply of the mail you got with this assessment.
+When you're finished you can send it to us in reply of the mail you got with this assessment or share the repo with [@glenngijsberts](https://github.com/glenngijsberts) and [@RobVermeer](https://github.com/robvermeer).
 
 ### Good luck
 
