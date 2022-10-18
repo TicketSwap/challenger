@@ -4,14 +4,15 @@ Thank you for doing our challenger. The goal would be to finish the todo-list st
 
 ## Approach
 
-The challenger is setup in a way for you to showcase your creativity, eye for detail, UX skills and overall knowledge of HTML, CSS and JS. Inside the challenge you'll find your goals set in a to do list.
+The challenger is setup in a way for you to showcase your creativity, eye for detail, UX skills and overall knowledge of HTML, CSS and TS/JS. Inside the challenge you'll find your goals set in a to do list. If you don't feel comfortable writing TypeScript feel free to
+do the challenge in JavaScript.
 
-We've timeboxed this challenge for roughly _2-4_ hours. Some of these goals should be pretty straight forward. Others, such as the 'improvement' goal are completely dependent on your own imagination. It's completely up to you how far you want to take it, but keep the timebox in mind.
+We've timeboxed this challenge for roughly _4_ hours. Some of these goals should be pretty straight forward. Others, such as the 'improvement' goal are completely dependent on your own imagination. It's completely up to you how far you want to take it, but keep the timebox in mind.
 
 ## Setup
 
 First of all, you need to setup your local environment.
-If you don't have [node/npm](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/getting-started/install) installed yet be sure to do so.
+If you don't have [node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/getting-started/install) installed yet be sure to do so.
 
 ```shell script
 > git clone git@github.com:TicketSwap/challenger.git
@@ -21,6 +22,14 @@ If you don't have [node/npm](https://nodejs.org/en/) and [yarn](https://yarnpkg.
 ```
 
 The server will start at [localhost:3000](http://localhost:3000), where you can find everything you need to start with the challenger.
+
+## Generating Types
+
+In this assessment you'll be working with GraphQL. We've setup a codegen for you that will generate the types for your queries and the types of the API. You can do this by running the following command:
+
+```shell script
+yarn graphql:generate-types
+```
 
 ## Handing in the assessment
 

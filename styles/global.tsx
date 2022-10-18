@@ -1,6 +1,6 @@
 import React from 'react'
 import { Global, css } from '@emotion/react'
-import { color, globalStyles, fontWeight } from '@ticketswap/solar'
+import { globalStyles, fontWeight } from '@ticketswap/solar'
 
 const styles = css`
   @font-face {

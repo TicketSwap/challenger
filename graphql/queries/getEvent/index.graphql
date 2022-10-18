@@ -1,0 +1,10 @@
+query getEvent($id: Int!) {
+  event(id: $id) {
+    id
+    name
+    date
+    location
+    imageUrl
+    description
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '~/components/Container'
 import Cover from '~/components/Cover'
 import Footer from '~/components/Footer'
-import { Collapsible, color, fontSize, Text, space } from '@ticketswap/solar'
+import { Collapsible, fontSize, Text, space } from '@ticketswap/solar'
 import styled from '@emotion/styled'
 import PopularEvents from '~/components/PopularEvents'
 
@@ -40,6 +40,11 @@ const Home = () => (
       <Collapsible buttonLabel="Todo list">
         <List>
           <li>
+            <strong>Refactor:</strong> There are some TypeScript errors,
+            refactor the code so it is valid. If you are not comfortable writing
+            TypeScript feel free to do the challenge in JavaScript.
+          </li>
+          <li>
             <strong>Improvement:</strong> The Challenger should be mobile
             friendly
           </li>
@@ -57,8 +62,7 @@ const Home = () => (
           </li>
           <li>
             <strong>Story:</strong> As a user I want to be able to navigate to a
-            search page and search all the events. I want to see the results and
-            be able to navigate to an event.
+            search page and search all the events.
           </li>
         </List>
       </Collapsible>
@@ -75,9 +79,6 @@ const Home = () => (
       <Collapsible buttonLabel="References">
         <List>
           <li>
-            We are using our own component library in this project, if you want
-            to check it out go to. Within this project you'll find our icons as
-            well.
             <ul>
               <li>
                 <a href="https://github.com/TicketSwap/solar">Github Solar</a>
@@ -85,16 +86,17 @@ const Home = () => (
               <li>
                 <a href="https://ticketswap.github.io/solar">Storybook Solar</a>
               </li>
-              <li>
-                <a href="https://ticketswap.github.io/comets-playground/">
-                  Playground Comets
-                </a>
-              </li>
             </ul>
           </li>
           <li>
             The React framework we use for this challenger is{' '}
             <a href="https://nextjs.org/docs">Next.js</a>
+          </li>
+          <li>
+            Our preferred language is{' '}
+            <a href="https://www.typescriptlang.org/docs/handbook/intro.html">
+              TypeScript
+            </a>
           </li>
           <li>
             For CSS we use the css-in-js package called{' '}

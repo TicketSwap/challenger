@@ -1,8 +1,7 @@
-import React from 'react'
 import { useQuery } from '@apollo/client'
 import { Card, space, Spinner } from '@ticketswap/solar'
 import styled from '@emotion/styled'
-import getPopularEvents from '~/graphql/queries/getPopularEvents'
+import { GET_POPULAR_EVENTS } from '~/graphql/queries/getPopularEvents'
 import Link from 'next/link'
 
 const Wrapper = styled.div`
@@ -12,7 +11,7 @@ const Wrapper = styled.div`
 `
 
 const PopularEvents = () => {
-  const { loading, data } = useQuery(getPopularEvents, {
+  const { loading, data } = useQuery(GET_POPULAR_EVENTS, {
     variables: {
       first: 6,
     },
@@ -26,11 +25,11 @@ const PopularEvents = () => {
     )
   }
 
-  const { popularEvents } = data
+  const { popularEvents = [] } = data || {}
 
   return (
     <Wrapper>
-      {popularEvents.map(({ id, name, location, date, imageUrl }) => (
+      {popularEvents.map(({ id, name, location, date, imageUrl }: any) => (
         <Link href={`/event/${id}`} passHref>
           <a>
             <Card

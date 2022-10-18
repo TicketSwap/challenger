@@ -1,4 +1,5 @@
-import { ApolloServer, gql, makeExecutableSchema } from 'apollo-server-micro'
+import { ApolloServer } from 'apollo-server-micro'
+import { NextApiRequest, NextApiResponse } from 'next'
 import { schema } from '~/graphql/schema'
 
 export const config = {
@@ -13,7 +14,10 @@ const apolloServer = new ApolloServer({
 
 const startServer = apolloServer.start()
 
-export default async function handler(req, res) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   await startServer
   await apolloServer.createHandler({
     path: '/api/graphql',

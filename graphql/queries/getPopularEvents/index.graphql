@@ -1,0 +1,10 @@
+query getPopularEvents($first: Int!) {
+  popularEvents(first: $first) {
+    id
+    name
+    date
+    location
+    imageUrl
+    description
+  }
+}
